@@ -1,7 +1,7 @@
 import { Polaroid } from './Polaroid'
 import { Arrow } from './Arrow'
 
-const BASE = 'https://ejjeinc.org/_assets/media/'
+const BASE = '/images/'
 
 const coaches = [
   {

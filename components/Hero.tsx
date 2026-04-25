@@ -6,7 +6,7 @@ export function Hero() {
   return (
     <section id="hero" className="hero" data-section="hero">
       <div className="hero-bg" style={{
-        backgroundImage: 'url(https://ejjeinc.org/_assets/media/e1430256e49d3a3842046121f6d80484.png)',
+        backgroundImage: 'url(/images/e1430256e49d3a3842046121f6d80484.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>

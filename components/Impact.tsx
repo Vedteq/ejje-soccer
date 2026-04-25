@@ -1,6 +1,6 @@
 import { Polaroid } from './Polaroid'
 
-const BASE = 'https://ejjeinc.org/_assets/media/'
+const BASE = '/images/'
 
 const stories = [
   {
