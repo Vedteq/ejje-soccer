@@ -4,36 +4,64 @@ import { useState } from 'react'
 import { Polaroid } from './Polaroid'
 import { Arrow } from './Arrow'
 
+const BASE = '/images/'
+
 const programs = [
   {
-    name: 'Little Kickers', age: 'ages 5–7', tagline: 'First touches, first friends.',
-    desc: 'A Saturday-morning intro to the game for our youngest players. Coordination, sharing, and fun — no scorekeeping, no pressure, just joy.',
-    facts: [['Schedule', 'Saturdays · 10–11am'], ['Cohort', '60 kids / season'], ['Coaches', '8 volunteers + 4 teen assistants'], ['Season', 'Fall + Spring · 10 weeks each']],
-    caption: 'First day jitters — Cohort 24',
+    name: 'Domestic Education',
+    age: 'U.S. · K–12 + College Prep',
+    tagline: 'Closing the gap for students at home.',
+    desc: 'We support underserved students across the United States with the tools they need to succeed in school and beyond — from school supplies and tutoring to college prep and youth leadership initiatives.',
+    facts: [
+      ['Focus', 'Low-income U.S. communities'],
+      ['Programs', 'Supplies · Tutoring · Mentorship'],
+      ['Plus', 'After-school + college prep'],
+      ['Anchor city', 'Spring Hill, FL'],
+    ],
+    caption: 'Local students, local impact',
+    src: BASE + 'f1f6a4a4d537b2455634692bf08cddb0.jpg',
   },
   {
-    name: 'Youth League', age: 'ages 8–12', tagline: 'Where skills get real.',
-    desc: 'Two weeknight practices plus a Saturday match. Mixed-skill teams to build both confidence and competition. Academic tutoring bundled in.',
-    facts: [['Schedule', 'Tue/Thu 5:30pm + Sat games'], ['Cohort', '320 kids across 18 teams'], ['Coaches', '24 volunteers, CDC-certified'], ['Season', 'Year-round · 3 seasons']],
-    caption: 'Saturday league — West Field',
+    name: 'International Education',
+    age: 'Global · Africa-focused',
+    tagline: 'Sending children back to school.',
+    desc: 'Across The Gambia, Tanzania, and other regions we partner with, we sponsor school fees, send textbooks and learning materials, support teachers, and help build classroom environments where children can actually learn.',
+    facts: [
+      ['Focus', 'Sub-Saharan Africa'],
+      ['Programs', 'School fees · Books · Classrooms'],
+      ['Partners', 'Local educators + NGOs'],
+      ['Reach', 'Multiple countries'],
+    ],
+    caption: 'International outreach',
+    src: BASE + '23160504a0476d0ab685a3ba2b314cec.jpg',
   },
   {
-    name: 'Academy Squad', age: 'ages 13–17', tagline: 'College prep on the pitch.',
-    desc: 'For committed players eyeing high-school varsity or college ball. Higher-intensity training, travel tournaments, academic check-ins every Friday.',
-    facts: [['Schedule', '4x/week + weekend travel'], ['Cohort', '80 players, tryouts each August'], ['Coaches', 'Licensed USSF Grade D+ staff'], ['Placements', '19 alumni on college rosters']],
-    caption: 'Travel tourney — 2025',
+    name: 'Community Support',
+    age: 'Domestic + Global',
+    tagline: 'Removing barriers to learning.',
+    desc: 'Education only works when basic needs are met. We run nutrition drives, mental wellness initiatives, family support programs, and healthcare equipment delivery — building the foundation that lets kids show up for school.',
+    facts: [
+      ['Focus', 'Wraparound support'],
+      ['Programs', 'Nutrition · Wellness · Family aid'],
+      ['Plus', 'Medical supply drops abroad'],
+      ['Where', 'U.S. + Africa'],
+    ],
+    caption: 'Community drives',
+    src: BASE + 'e8083a5366ee30e9f432285f1bc87fcf.jpg',
   },
   {
-    name: 'Girls Initiative', age: 'all ages', tagline: 'Built for her game.',
-    desc: 'Dedicated girls-only practices and teams at every age level, with female coaches and mentors. Launched 2018 — now 40% of our total enrollment.',
-    facts: [['Schedule', 'Parallel to all programs'], ['Cohort', '326 girls in 2025–26'], ['Mentors', '22 female coaches + alumni'], ['Launched', '2018']],
-    caption: 'Girls Night Lights',
-  },
-  {
-    name: 'Summer Camp', age: 'ages 6–14', tagline: 'Eight weeks. Two meals a day. Zero cost.',
-    desc: 'Full-day summer program: morning training, lunch, quiet reading hour, afternoon scrimmages. Keeps kids active and fed when school is out.',
-    facts: [['Dates', 'June 15 – August 8, 2026'], ['Cohort', '180 kids daily'], ['Meals', 'Breakfast, lunch, snack — daily'], ['Transport', 'Door-to-door bus included']],
-    caption: "Summer '25 · Week 1",
+    name: 'Youth Empowerment',
+    age: 'Ages 8 – 18',
+    tagline: 'Sports, leadership, and mentorship.',
+    desc: 'Our roots are in youth sports, and we still believe in the power of mentorship through play and creative arts. Today this runs alongside our education work — keeping young people engaged, confident, and supported.',
+    facts: [
+      ['Focus', 'Personal + academic growth'],
+      ['Programs', 'Mentorship · Leadership · Arts'],
+      ['Plus', 'Coaching clinics (Gambia)'],
+      ['Aim', 'Confidence + opportunity'],
+    ],
+    caption: 'Mentorship in action',
+    src: BASE + '8f69da0331e26d475b1fb7791cfb55bf.jpg',
   },
 ]
 
@@ -46,9 +74,9 @@ export function Programs() {
         <div className="section-head">
           <div>
             <div className="eyebrow" style={{ fontSize: 26, marginBottom: 12 }}>what we do</div>
-            <h2 className="section-title">Five programs. <em>One club.</em></h2>
+            <h2 className="section-title">Four pillars. <em>One mission.</em></h2>
           </div>
-          <p>From first kicks at five to college recruitment at seventeen, there&#39;s a place for every kid.</p>
+          <p>Education at the center — at home and around the world. Mentorship and community work alongside.</p>
         </div>
         <div className="programs">
           <div className="program-nav">
@@ -61,7 +89,13 @@ export function Programs() {
           </div>
           <div className="program-panel" key={active} style={{ animation: 'fadeIn .4s ease' }}>
             <div className="program-photo-wrap">
-              <Polaroid dark tilt="tilt-l" caption={programs[active].caption} label="replace w/ real photo" />
+              <Polaroid
+                dark
+                tilt="tilt-l"
+                caption={programs[active].caption}
+                src={programs[active].src}
+                alt={programs[active].name}
+              />
             </div>
             <div className="program-copy">
               <h3>{programs[active].tagline}</h3>
@@ -74,7 +108,15 @@ export function Programs() {
                   </div>
                 ))}
               </div>
-              <a href="#join" className="btn btn-primary">Sign a kid up <Arrow /></a>
+              <a
+                href="https://www.zeffy.com/donation-form/e6583dcc-fd51-4fee-9e71-19062c76afde"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+                style={{ textDecoration: 'none' }}
+              >
+                Support this program <Arrow />
+              </a>
             </div>
           </div>
         </div>

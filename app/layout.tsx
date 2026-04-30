@@ -24,8 +24,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'EJJE Soccer Academy — Help us keep it free.',
-  description: 'A 501(c)(3) nonprofit keeping youth soccer free for 800+ kids a year. No registration fees. No equipment surcharge. Just cleats, a ball, and a team.',
+  title: 'EJJE Incorporated — Education access for underserved children, at home and abroad',
+  description: 'A 501(c)(3) nonprofit expanding access to education, mentorship, and community support for underserved children and families across the U.S. and internationally.',
 }
 
 export default function RootLayout({

@@ -4,25 +4,25 @@ const BASE = '/images/'
 
 const stories = [
   {
-    quote: "Eddie is smart, patient and passionate about the sport. If you want your son or daughter trained by a true professional, call Eddie.",
-    name: 'Jay F. Campbell',
-    role: 'Parent · EJJE Soccer Academy',
-    caption: 'EJJE · on the field',
-    src: BASE + '8f69da0331e26d475b1fb7791cfb55bf.jpg',
+    quote: "With EJJE, I finally have the books I need to keep up in class.",
+    name: 'Jordan',
+    role: 'Student · United States',
+    caption: 'Local · school-supply support',
+    src: BASE + 'f1f6a4a4d537b2455634692bf08cddb0.jpg',
   },
   {
-    quote: "Was able to achieve my required community service hours in a fun and interactive way by helping with various fundraising events and coaching small groups of kids.",
-    name: 'Ethan Kidd-Oyakhilome',
-    role: 'Volunteer & youth coach',
-    caption: 'Community · Spring Hill',
+    quote: "I dream of being a teacher. EJJE helped me return to school.",
+    name: 'Amina',
+    role: 'Student · The Gambia',
+    caption: 'International · back to school',
     src: BASE + '23160504a0476d0ab685a3ba2b314cec.jpg',
   },
   {
-    quote: "Summer sweat and sports — how our young athletes cope. EJJE keeps kids active, disciplined, and off the streets all summer long.",
-    name: 'Hernando Today',
-    role: 'Local press · youth sports feature',
-    caption: 'Press coverage',
-    src: BASE + 'f1f6a4a4d537b2455634692bf08cddb0.jpg',
+    quote: "Eddie is smart, patient and passionate. If you want your child supported by a true professional, call Eddie.",
+    name: 'Jay F. Campbell',
+    role: 'Parent · EJJE community',
+    caption: 'EJJE · in the field',
+    src: BASE + '8f69da0331e26d475b1fb7791cfb55bf.jpg',
   },
 ]
 
@@ -32,10 +32,10 @@ export function Impact() {
       <div className="wrap">
         <div className="section-head">
           <div>
-            <div className="eyebrow" style={{ fontSize: 26, marginBottom: 12 }}>in their own words</div>
-            <h2 className="section-title">The kids. The parents. The <em>coaches.</em></h2>
+            <div className="eyebrow" style={{ fontSize: 26, marginBottom: 12 }}>stories of hope</div>
+            <h2 className="section-title">Changing lives <em>locally and globally.</em></h2>
           </div>
-          <p>We asked, &#34;What does EJJE mean to you?&#34; Here&#39;s what they said.</p>
+          <p>One U.S. student, one international student, one community story. Multiply by hundreds.</p>
         </div>
         <div className="stories">
           {stories.map((s, i) => (
@@ -47,7 +47,7 @@ export function Impact() {
           ))}
         </div>
 
-        {/* Letter from the field */}
+        {/* Letter from the field — Tanzania */}
         <div style={{
           marginTop: 72,
           padding: '48px 48px 48px 40px',
@@ -86,7 +86,7 @@ export function Impact() {
               color: 'var(--chalk)',
               marginBottom: 20,
             }}>
-              &#8220;I want to express my gratitude for all of you who so generously made it possible for us to outfit a soccer team in Africa — in the poorest slum in Tanzania. Until recently they had been playing with a soccer ball made of trash and no other equipment. The teenagers who received your gifts were moved to tears of joy. You all brought them dignity and hope.&#8221;
+              &#8220;I want to express my gratitude for all of you who so generously made it possible for us to outfit youth in the poorest slum in Tanzania. Until recently they had been playing with a ball made of trash and no other equipment. The teenagers who received your gifts were moved to tears of joy. You all brought them dignity and hope.&#8221;
             </p>
             <div style={{ fontSize: 14, color: 'rgba(250,244,232,0.6)' }}>
               <strong style={{ color: 'var(--chalk)' }}>Kathy Conner</strong> · Young Life Africa · Tanzania

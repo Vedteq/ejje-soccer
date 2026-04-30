@@ -36,17 +36,20 @@ export function Nav({ barVisible }: NavProps) {
     >
       <a href="#hero" className="nav-logo">
         <div className="crest">E</div>
-        <span>EJJE Soccer Academy</span>
+        <span>EJJE Incorporated</span>
       </a>
       <div className="nav-links">
-        <a href="#mission" className="nav-link">Mission</a>
+        <a href="#about" className="nav-link">About</a>
         <a href="#programs" className="nav-link">Programs</a>
-        <a href="#impact" className="nav-link">Kids</a>
-        <a href="#events" className="nav-link">Events</a>
-        <a href="#coaches" className="nav-link">Coaches</a>
-        <a href="#donors" className="nav-link">Donors</a>
-        <a href="#join" className="nav-link">Join</a>
-        <a href="#donate" className="btn btn-primary" style={{ padding: '10px 18px', fontSize: 13, marginLeft: 8 }}>
+        <a href="#impact" className="nav-link">Impact</a>
+        <a href="#get-involved" className="nav-link">Get Involved</a>
+        <a
+          href="https://www.zeffy.com/donation-form/e6583dcc-fd51-4fee-9e71-19062c76afde"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary"
+          style={{ padding: '10px 18px', fontSize: 13, marginLeft: 8, textDecoration: 'none' }}
+        >
           Donate <Arrow />
         </a>
       </div>

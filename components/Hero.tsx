@@ -10,22 +10,23 @@ export function Hero() {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}>
-        <div style={{ position: 'absolute', inset: 0, background: 'rgba(20,40,20,0.72)' }} />
+        <div style={{ position: 'absolute', inset: 0, background: 'rgba(20,40,20,0.74)' }} />
       </div>
       <div className="hero-content">
         <div>
           <div className="eyebrow" style={{ fontSize: 26, marginBottom: 20, transform: 'rotate(-2deg)', display: 'inline-block' }}>
-            — since 2009, and still free —
+            — at home and around the world —
           </div>
           <h1 className="display">
-            Every kid deserves a<br />
-            <span className="script">chance to play.</span>
+            Education for <br />
+            <span className="script">every child.</span>
           </h1>
           <p className="hero-lead">
-            We&#39;re a nonprofit keeping youth soccer free for kids in Spring Hill, FL — and equipping communities as far as Africa.
-            No registration fees. No &#34;equipment surcharge.&#34; Just cleats, a ball, and a team.
+            Millions of underserved children lack access to essential learning resources.
+            EJJE Incorporated provides education, mentorship, and community support for children and families
+            <strong> in the U.S. and internationally.</strong>
             <br /><br />
-            <strong>We can only keep it that way with your help.</strong>
+            <strong>Your gift opens the door to lifelong opportunity.</strong>
           </p>
           <div className="hero-ctas">
             <a
@@ -35,13 +36,13 @@ export function Hero() {
               className="btn btn-primary big"
               style={{ textDecoration: 'none' }}
             >
-              <span>♥</span> Donate today
+              <span>♥</span> Donate now
             </a>
-            <a href="#join" className="btn btn-ghost big">Register a player</a>
+            <a href="#programs" className="btn btn-ghost big">Support a program</a>
           </div>
           <div className="hero-footnote">
             <span>501(c)(3) nonprofit</span>
-            <span>Spring Hill, FL</span>
+            <span>Spring Hill, FL · Africa</span>
             <span>Since 2009</span>
           </div>
         </div>
@@ -61,16 +62,16 @@ export function Hero() {
             <span className="v">Spring Hill, FL</span>
           </div>
           <div className="impact-row">
-            <span className="k">Social</span>
-            <a href="https://www.facebook.com/ejjesoccer" target="_blank" rel="noopener noreferrer" className="v" style={{ color: 'var(--accent-2)', textDecoration: 'none' }}>@ejjesoccer</a>
+            <span className="k">Reach</span>
+            <span className="v">U.S. + Africa</span>
           </div>
           <div style={{ marginTop: 20, paddingTop: 20, borderTop: '1px solid rgba(250,244,232,0.12)' }}>
             <a
-              href="#join"
+              href="#get-involved"
               className="btn btn-chalk"
               style={{ width: '100%', justifyContent: 'center', textDecoration: 'none' }}
             >
-              Register a player free <Arrow />
+              Get involved <Arrow />
             </a>
           </div>
         </div>
@@ -94,7 +95,7 @@ export function FloatDonate() {
 }
 
 export function ValuesStrip() {
-  const items = ['Teamwork', 'Discipline', 'Respect', 'Joy', 'Grit', 'Belonging']
+  const items = ['Education', 'Mentorship', 'Community', 'Opportunity', 'Belonging', 'Hope']
   const render = () => items.map((v, i) => (
     <span key={i} style={{ display: 'inline-flex', alignItems: 'center', gap: 48 }}>
       <em>{v}</em>
@@ -111,43 +112,74 @@ export function ValuesStrip() {
   )
 }
 
-export function Letter() {
+export function About() {
   return (
-    <section id="mission" className="section" data-section="mission" style={{ background: 'var(--chalk-2)' }}>
+    <section id="about" className="section" data-section="about" style={{ background: 'var(--chalk-2)' }}>
       <div className="wrap">
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <div className="eyebrow" style={{ fontSize: 28 }}>A letter from our founder</div>
+          <div className="eyebrow" style={{ fontSize: 28 }}>About EJJE</div>
           <h2 className="section-title" style={{ margin: '12px auto 0' }}>
             Why we started. <em>Why we can&#39;t stop.</em>
           </h2>
         </div>
+
+        {/* Mission + Vision panel */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: '1fr 1fr',
+          gap: 32,
+          marginBottom: 56,
+          maxWidth: 1100,
+          margin: '0 auto 56px',
+        }}>
+          <div style={{ padding: '32px 36px', background: 'white', borderRadius: 'var(--radius-lg)', border: '1px solid var(--line)' }}>
+            <div className="eyebrow" style={{ fontSize: 16, marginBottom: 8, color: 'var(--accent)' }}>Our Mission</div>
+            <p style={{ fontFamily: 'var(--font-fraunces), Georgia, serif', fontSize: 19, lineHeight: 1.5, color: 'var(--ink)', margin: 0 }}>
+              EJJE Incorporated provides domestic and international support to underserved and underprivileged children and families by expanding access to quality education, essential resources, and community development programs.
+            </p>
+          </div>
+          <div style={{ padding: '32px 36px', background: 'white', borderRadius: 'var(--radius-lg)', border: '1px solid var(--line)' }}>
+            <div className="eyebrow" style={{ fontSize: 16, marginBottom: 8, color: 'var(--accent)' }}>Our Vision</div>
+            <p style={{ fontFamily: 'var(--font-fraunces), Georgia, serif', fontSize: 19, lineHeight: 1.5, color: 'var(--ink)', margin: 0 }}>
+              A world — at home and abroad — where every child has equal access to education and every community has the tools to learn, grow, and thrive.
+            </p>
+          </div>
+        </div>
+
+        {/* Founder letter */}
         <div className="letter">
           <p>
-            In 2009, I saw kids in our neighborhood with real talent and nowhere to play — not because they lacked skill, but because their families couldn&#39;t afford registration fees, cleats, or uniforms. That&#39;s when EJJE was born: a promise that no child would ever be turned away because of money.
+            EJJE was founded in 2009 with a simple promise: no child should be turned away because of money. What began as free youth sports for kids in Spring Hill, Florida has grown — over the years — into something much larger.
           </p>
           <p>
-            Seventeen years later, we&#39;ve put thousands of kids on the pitch without charging them a single dollar. Cleats on us. Uniforms on us. Transport, meals, tournament fees — all on us. And our mission reaches beyond Spring Hill — to Africa, where we&#39;ve supported coaching clinics, clean water projects, and orphanage homes.
+            We saw that opportunity didn&#39;t stop at the field. The kids who needed cleats also needed school supplies. The communities we served at home had counterparts overseas — in Tanzania, in The Gambia — where children played with footballs made of trash and walked miles to schools without textbooks.
           </p>
           <p>
-            The reason we can do this is simple: people like you give. Not corporations. Not government grants. Neighbors, parents, alumni, and strangers who believe a kid shouldn&#39;t have to be born rich to play a game.
+            Today, EJJE Incorporated is education-first. We provide school supplies, tutoring, and mentorship to underserved students in the U.S., and we sponsor school fees, classroom resources, and teacher training internationally. Sports, mentorship, and community work continue alongside, but education is the heart of what we do now — because education is the starting point for opportunity, stability, and generational change.
           </p>
           <p>
-            So this is my ask. If you can spare $25, or $50, or whatever feels right — please do. It goes straight to a kid who needs cleats. And it means we get to keep saying yes.
+            We can do this because people like you give. Not corporations. Not government grants. Neighbors and strangers who believe a child shouldn&#39;t have to be born rich to learn.
+          </p>
+          <p>
+            If you can spare $25, $50, or whatever feels right — please do. It buys a backpack of school supplies. It pays for a tutoring session. It funds a classroom thousands of miles away. And it means we get to keep saying yes.
           </p>
           <p>Thank you for being part of this.</p>
-          <div className="signature">— Coach Eddie</div>
-          <div className="sig-meta">Eddie Oyakhilome · Founder &amp; Executive Director, EJJE Soccer Academy</div>
+          <div className="signature">— Eddie</div>
+          <div className="sig-meta">Eddie Oyakhilome · Founder &amp; Executive Director, EJJE Incorporated</div>
         </div>
       </div>
     </section>
   )
 }
 
+// Backwards-compat export — page.tsx may still import Letter
+export const Letter = About
+
 export function Stats() {
   const stats = [
-    { num: '800', sup: '+', label: 'Kids playing for free every year across all age groups' },
-    { num: '17', sup: '', label: 'Years running — since 2009, never charged a dime' },
-    { num: '5', sup: '', label: 'Programs: Little Kickers, Youth League, Academy Squad, Girls Initiative, Summer Camp' },
+    { num: '17', sup: '', label: 'Years serving children and families — since 2009' },
+    { num: '500', sup: '+', label: 'Underserved students our 2026 campaign aims to support' },
+    { num: '4', sup: '', label: 'Program areas: Domestic Ed · International Ed · Community · Mentorship' },
     { num: '2', sup: '', label: 'Continents — Spring Hill, FL and communities across Africa' },
   ]
   return (

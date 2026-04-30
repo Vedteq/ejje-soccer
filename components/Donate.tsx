@@ -11,12 +11,12 @@ export function Donate() {
   const finalAmount = custom ? parseInt(custom) || 0 : amount
 
   const impacts = [
-    { min: 0, text: "Every dollar puts cleats on a kid's feet." },
-    { min: 25, text: `$${finalAmount} — provides a jersey + shorts for one player, one season.` },
-    { min: 50, text: `$${finalAmount} — sponsors a Little Kicker for an entire 10-week season.` },
-    { min: 100, text: `$${finalAmount} — cleats, uniform, and meals for one Youth League player.` },
-    { min: 250, text: `$${finalAmount} — funds a full Academy Squad travel weekend for two players.` },
-    { min: 500, text: `$${finalAmount} — underwrites a summer camp scholarship. 8 weeks. 2 meals a day. One kid.` },
+    { min: 0, text: "Every dollar puts a book in a child's hands." },
+    { min: 25, text: `$${finalAmount} — provides a backpack of school supplies for one child.` },
+    { min: 50, text: `$${finalAmount} — funds an after-school tutoring session for a student.` },
+    { min: 100, text: `$${finalAmount} — supports an international student's school fees + books for a term.` },
+    { min: 250, text: `$${finalAmount} — sponsors education for a student, U.S. or abroad, for a full term.` },
+    { min: 500, text: `$${finalAmount} — helps build or upgrade a classroom — desks, books, learning tools.` },
   ]
   const impact = [...impacts].reverse().find(i => finalAmount >= i.min) || impacts[0]
 
@@ -25,13 +25,12 @@ export function Donate() {
       <div className="wrap">
         <div className="donate-wrap">
           <div>
-            <div className="eyebrow" style={{ fontSize: 26, marginBottom: 12 }}>please give</div>
+            <div className="eyebrow" style={{ fontSize: 26, marginBottom: 12 }}>support education</div>
             <h2 className="section-title" style={{ marginBottom: 24 }}>
-              Keep the game <em>free.</em>
+              Open the door to <em>opportunity.</em>
             </h2>
             <p className="muted" style={{ fontSize: 18, maxWidth: 480, marginBottom: 28, lineHeight: 1.6 }}>
-              EJJE is 100% donor-funded. No membership fees, no registration costs, no &#34;equipment surcharge.&#34;
-              Your gift is what keeps our fields open and our kids on them.
+              EJJE is 100% donor-funded. Every gift becomes school supplies, tutoring, school fees, or classroom resources — for a child in the U.S. or abroad who needs them.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, maxWidth: 500, marginBottom: 32 }}>
               <div>
@@ -44,20 +43,20 @@ export function Donate() {
               </div>
             </div>
             <div style={{ padding: '20px 24px', background: 'rgba(250,244,232,0.07)', borderRadius: 'var(--radius)', border: '1px solid rgba(250,244,232,0.12)' }}>
-              <div style={{ fontSize: 13, color: 'rgba(250,244,232,0.6)', marginBottom: 6 }}>Also giving via GoFundMe?</div>
+              <div style={{ fontSize: 13, color: 'rgba(250,244,232,0.6)', marginBottom: 6 }}>Active campaign</div>
               <a
                 href="https://gofund.me/a826a227"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{ color: 'var(--accent-2)', fontSize: 14, fontWeight: 600 }}
               >
-                Help Medina United U12 Boys → FL Cup International
+                Help Medina United U12 Boys → FL Cup International (GoFundMe)
               </a>
             </div>
           </div>
           <div className="donate-card">
             <div style={{ fontFamily: 'var(--font-caveat), cursive', fontSize: 28, color: 'var(--accent)', marginBottom: 12, lineHeight: 1 }}>
-              make a gift →
+              support a student →
             </div>
             <div className="donate-toggle">
               <button className={freq === 'once' ? 'active' : ''} onClick={() => setFreq('once')}>One-time</button>

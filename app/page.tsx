@@ -3,14 +3,11 @@
 import { useState } from 'react'
 import { DonateBar } from '@/components/DonateBar'
 import { Nav } from '@/components/Nav'
-import { Hero, FloatDonate, ValuesStrip, Letter, Stats } from '@/components/Hero'
+import { Hero, FloatDonate, ValuesStrip, About, Stats } from '@/components/Hero'
 import { Programs } from '@/components/Programs'
 import { Impact } from '@/components/Impact'
-import { Events } from '@/components/Events'
 import { Donate } from '@/components/Donate'
-import { Coaches } from '@/components/Coaches'
-import { DonorWall } from '@/components/DonorWall'
-import { Join } from '@/components/Join'
+import { GetInvolved } from '@/components/GetInvolved'
 import { Footer } from '@/components/Footer'
 
 export default function Home() {
@@ -22,15 +19,12 @@ export default function Home() {
       <Nav barVisible={barVisible} />
       <Hero />
       <ValuesStrip />
-      <Letter />
+      <About />
       <Stats />
       <Programs />
       <Impact />
-      <Events />
       <Donate />
-      <Coaches />
-<DonorWall />
-      <Join />
+      <GetInvolved />
       <Footer />
       <FloatDonate />
     </>
