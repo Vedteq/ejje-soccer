@@ -101,44 +101,48 @@ export function GetInvolved() {
         <div style={{ marginBottom: 48 }}>
           <div className="eyebrow" style={{ fontSize: 18, marginBottom: 24, textAlign: 'center' }}>premier partners</div>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, maxWidth: 860, margin: '0 auto' }}>
-            {premierPartners.map(p => (
-              <a
-                key={p.name}
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  gap: 16,
-                  padding: '28px 32px',
-                  background: 'white',
-                  borderRadius: 'var(--radius-lg)',
-                  border: '2px solid var(--accent)',
-                  textDecoration: 'none',
-                }}
-              >
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  background: p.logoBg,
-                  borderRadius: 'var(--radius)',
-                  padding: '16px 24px',
-                  minHeight: 72,
-                }}>
+            {premierPartners.map(p => {
+              const dark = p.logoBg !== '#ffffff'
+              return (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: 16,
+                    padding: '40px 36px 32px',
+                    background: p.logoBg,
+                    borderRadius: 'var(--radius-lg)',
+                    border: '2px solid var(--accent)',
+                    textDecoration: 'none',
+                    textAlign: 'center',
+                  }}
+                >
                   <img
                     src={p.logo}
                     alt={p.name}
-                    style={{ maxHeight: 52, maxWidth: '100%', objectFit: 'contain', display: 'block' }}
+                    style={{
+                      maxHeight: 72,
+                      maxWidth: '80%',
+                      objectFit: 'contain',
+                      display: 'block',
+                      mixBlendMode: dark ? 'normal' : 'multiply',
+                    }}
                   />
-                </div>
-                <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>{p.tagline}</div>
-                <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600 }}>
-                  {p.url.replace('https://', '')} →
-                </div>
-              </a>
-            ))}
+                  <div style={{ fontSize: 13, color: dark ? 'rgba(255,255,255,0.65)' : 'var(--muted)', lineHeight: 1.5 }}>
+                    {p.tagline}
+                  </div>
+                  <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600 }}>
+                    {p.url.replace('https://', '')} →
+                  </div>
+                </a>
+              )
+            })}
           </div>
         </div>
 
