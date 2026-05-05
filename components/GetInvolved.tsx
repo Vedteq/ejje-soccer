@@ -16,18 +16,29 @@ const premierPartners = [
     logo: '/images/logo-capt.png',
     logoBg: '#ffffff',
   },
+  {
+    name: 'Medina United Football Academy',
+    tagline: 'Elite football development — The Gambia. EJJE\'s international coaching partner.',
+    url: 'https://medinaunitedacademy.com',
+    logo: '/images/logo-medina.png',
+    logoBg: '#ffffff',
+  },
+  {
+    name: 'Hernando Soccer Club',
+    tagline: 'Community soccer for Spring Hill — partnering with EJJE to keep kids on the pitch.',
+    url: 'https://hernandosoccerclub.com',
+    logo: '/images/logo-hernando.png',
+    logoBg: '#0d0d0d',
+  },
 ]
 
 const partners = [
-  'Hernando Soccer Club Springhill',
-  'Medina United Football Academy',
   'Sunshine for Life',
   'SKP Travels',
   'My Life Moon',
   'Indigat',
   'Gorex Consulting',
   'Value Dental Springhill',
-  'Springhill Florida',
 ]
 
 const ways = [
@@ -100,7 +111,7 @@ export function GetInvolved() {
         {/* Premier Partners */}
         <div style={{ marginBottom: 48 }}>
           <div className="eyebrow" style={{ fontSize: 18, marginBottom: 24, textAlign: 'center' }}>premier partners</div>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, maxWidth: 860, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, maxWidth: 1100, margin: '0 auto' }}>
             {premierPartners.map(p => {
               const dark = p.logoBg !== '#ffffff'
               return (
