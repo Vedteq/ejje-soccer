@@ -4,13 +4,17 @@ import { GetInvolvedForm } from './Join'
 const premierPartners = [
   {
     name: 'Qoollege',
-    tagline: 'Find Your Perfect College Match — AI-powered college admissions platform.',
+    tagline: 'AI-powered college matching, scholarships, essays & test prep.',
     url: 'https://qoollege.com',
+    logo: 'https://qoollege.com/_next/image?url=%2Fassets%2Finverted.png&w=256&q=75&dpl=dpl_Aw3DSjXvqgRjQkEh9HjCoXN6fYKy',
+    logoBg: '#1a1a2e',
   },
   {
     name: 'Capt Sports Agency',
     tagline: 'Athlete management, scouting & development — Brooksville, FL.',
     url: 'https://www.captinstitute.com',
+    logo: 'https://static.wixstatic.com/media/a544c4_061fc77d5f4c4be2958bbe1d479a7be7~mv2.png/v1/fill/w_300,h_293,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a544c4_061fc77d5f4c4be2958bbe1d479a7be7~mv2.png',
+    logoBg: '#ffffff',
   },
 ]
 
@@ -106,26 +110,31 @@ export function GetInvolved() {
                 style={{
                   display: 'flex',
                   flexDirection: 'column',
-                  gap: 8,
+                  gap: 16,
                   padding: '28px 32px',
                   background: 'white',
                   borderRadius: 'var(--radius-lg)',
                   border: '2px solid var(--accent)',
                   textDecoration: 'none',
-                  transition: 'box-shadow .15s',
                 }}
               >
                 <div style={{
-                  fontFamily: 'var(--font-fraunces), Georgia, serif',
-                  fontSize: 24,
-                  fontWeight: 700,
-                  color: 'var(--ink)',
-                  letterSpacing: '-0.01em',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  background: p.logoBg,
+                  borderRadius: 'var(--radius)',
+                  padding: '16px 24px',
+                  minHeight: 72,
                 }}>
-                  {p.name}
+                  <img
+                    src={p.logo}
+                    alt={p.name}
+                    style={{ maxHeight: 52, maxWidth: '100%', objectFit: 'contain', display: 'block' }}
+                  />
                 </div>
                 <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>{p.tagline}</div>
-                <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600, marginTop: 4 }}>
+                <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600 }}>
                   {p.url.replace('https://', '')} →
                 </div>
               </a>
