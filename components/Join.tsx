@@ -105,7 +105,7 @@ export function GetInvolvedForm() {
         </div>
         <div className="form-field" style={{ marginBottom: 16 }}>
           <label>City / Location (optional)</label>
-          <input placeholder="e.g. Spring Hill, FL or remote" value={location} onChange={e => setLocation(e.target.value)} />
+          <input placeholder="e.g. Tampa Bay, FL or remote" value={location} onChange={e => setLocation(e.target.value)} />
         </div>
         <div className="form-field" style={{ marginBottom: 24 }}>
           <label>Tell us a bit more (optional)</label>

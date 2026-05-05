@@ -1,16 +1,28 @@
 import { Arrow } from './Arrow'
 import { GetInvolvedForm } from './Join'
 
+const premierPartners = [
+  {
+    name: 'Qoollege',
+    tagline: 'Find Your Perfect College Match — AI-powered college admissions platform.',
+    url: 'https://qoollege.com',
+  },
+  {
+    name: 'Capt Sports Agency',
+    tagline: 'Athlete management, scouting & development — Brooksville, FL.',
+    url: 'https://www.captinstitute.com',
+  },
+]
+
 const partners = [
-  'Sunshine for Life',
-  'Capt Sports Agency',
+  'Hernando Soccer Club Springhill',
   'Medina United Football Academy',
-  'Qoollege',
+  'Sunshine for Life',
   'SKP Travels',
   'My Life Moon',
   'Indigat',
   'Gorex Consulting',
-  'Value Dental',
+  'Value Dental Springhill',
   'Springhill Florida',
 ]
 
@@ -79,6 +91,46 @@ export function GetInvolved() {
               </a>
             </div>
           ))}
+        </div>
+
+        {/* Premier Partners */}
+        <div style={{ marginBottom: 48 }}>
+          <div className="eyebrow" style={{ fontSize: 18, marginBottom: 24, textAlign: 'center' }}>premier partners</div>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20, maxWidth: 860, margin: '0 auto' }}>
+            {premierPartners.map(p => (
+              <a
+                key={p.name}
+                href={p.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: 8,
+                  padding: '28px 32px',
+                  background: 'white',
+                  borderRadius: 'var(--radius-lg)',
+                  border: '2px solid var(--accent)',
+                  textDecoration: 'none',
+                  transition: 'box-shadow .15s',
+                }}
+              >
+                <div style={{
+                  fontFamily: 'var(--font-fraunces), Georgia, serif',
+                  fontSize: 24,
+                  fontWeight: 700,
+                  color: 'var(--ink)',
+                  letterSpacing: '-0.01em',
+                }}>
+                  {p.name}
+                </div>
+                <div style={{ fontSize: 13, color: 'var(--muted)', lineHeight: 1.5 }}>{p.tagline}</div>
+                <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600, marginTop: 4 }}>
+                  {p.url.replace('https://', '')} →
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Partners */}

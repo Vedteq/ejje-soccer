@@ -7,7 +7,7 @@ export function Footer() {
             <div className="footer-brand">EJJE<br /><em>Incorporated.</em></div>
             <p style={{ color: 'rgba(250,244,232,0.65)', fontSize: 14, maxWidth: 360, lineHeight: 1.65 }}>
               Expanding access to education, mentorship, and community support for underserved children — at home and around the world.<br />
-              A 501(c)(3) nonprofit · Spring Hill, FL · Since 2009
+              A 501(c)(3) nonprofit · Tampa Bay, FL · Since 2009
             </p>
             <p style={{ color: 'rgba(250,244,232,0.5)', fontSize: 13, marginTop: 8 }}>
               <a href="https://www.facebook.com/ejjesoccer" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', marginRight: 12 }}>Facebook</a>
@@ -39,7 +39,7 @@ export function Footer() {
         </div>
         <div className="footer-bottom">
           <span>© 2026 EJJE Incorporated · Registered 501(c)(3) nonprofit (formerly EJJE Soccer Academy)</span>
-          <span>Spring Hill, FL · <a href="mailto:soccer@ejje.net" style={{ color: 'inherit' }}>soccer@ejje.net</a> · <a href="tel:+18133556671" style={{ color: 'inherit' }}>813-355-6671</a></span>
+          <span>Tampa Bay, FL · <a href="mailto:soccer@ejje.net" style={{ color: 'inherit' }}>soccer@ejje.net</a> · <a href="tel:+18133556671" style={{ color: 'inherit' }}>813-355-6671</a></span>
         </div>
       </div>
     </footer>

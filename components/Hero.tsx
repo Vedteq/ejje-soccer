@@ -42,7 +42,7 @@ export function Hero() {
           </div>
           <div className="hero-footnote">
             <span>501(c)(3) nonprofit</span>
-            <span>Spring Hill, FL · Africa</span>
+            <span>Tampa Bay, FL · Africa</span>
             <span>Since 2009</span>
           </div>
         </div>
@@ -59,7 +59,7 @@ export function Hero() {
           </div>
           <div className="impact-row">
             <span className="k">Location</span>
-            <span className="v">Spring Hill, FL</span>
+            <span className="v">Tampa Bay, FL</span>
           </div>
           <div className="impact-row">
             <span className="k">Reach</span>
@@ -149,10 +149,10 @@ export function About() {
         {/* Founder letter */}
         <div className="letter">
           <p>
-            EJJE was founded in 2009 with a simple promise: no child should be turned away because of money. What began as free youth sports for kids in Spring Hill, Florida has grown — over the years — into something much larger.
+            EJJE was founded in 2009 with a simple promise: no child should be turned away because of money. What began as free youth sports for kids in Tampa Bay, Florida has grown — over the years — into something much larger.
           </p>
           <p>
-            We saw that opportunity didn&#39;t stop at the field. The kids who needed cleats also needed school supplies. The communities we served at home had counterparts overseas — in Tanzania, in The Gambia — where children played with footballs made of trash and walked miles to schools without textbooks.
+            We saw that opportunity didn&#39;t stop at the field. The kids who needed cleats also needed school supplies. The communities we served at home had counterparts overseas — in Tanzania, The Gambia, Kenya, Uganda, and Ghana — where children played with footballs made of trash and walked miles to schools without textbooks.
           </p>
           <p>
             Today, EJJE Incorporated is education-first. We provide school supplies, tutoring, and mentorship to underserved students in the U.S., and we sponsor school fees, classroom resources, and teacher training internationally. Sports, mentorship, and community work continue alongside, but education is the heart of what we do now — because education is the starting point for opportunity, stability, and generational change.
@@ -180,7 +180,7 @@ export function Stats() {
     { num: '17', sup: '', label: 'Years serving children and families — since 2009' },
     { num: '500', sup: '+', label: 'Underserved students our 2026 campaign aims to support' },
     { num: '4', sup: '', label: 'Program areas: Domestic Ed · International Ed · Community · Mentorship' },
-    { num: '2', sup: '', label: 'Continents — Spring Hill, FL and communities across Africa' },
+    { num: '2', sup: '', label: 'Continents — Tampa Bay, FL and communities across Africa' },
   ]
   return (
     <section className="section" style={{ paddingTop: 60, paddingBottom: 100 }} data-section="stats">
