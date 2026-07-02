@@ -15,17 +15,17 @@ export function Footer() {
             </p>
           </div>
           <div>
-            <h4>Programs</h4>
-            <a href="#programs">Domestic Education</a>
-            <a href="#programs">International Education</a>
-            <a href="#programs">Community Support</a>
-            <a href="#programs">Youth Empowerment</a>
+            <h4>Our Impact</h4>
+            <a href="/impact/domestic">Domestic Pipeline (U.S.)</a>
+            <a href="/impact/international">International Pipeline (Africa)</a>
+            <a href="/#impact-pipelines">Both pipelines</a>
+            <a href="/#impact">Stories of hope</a>
           </div>
           <div>
             <h4>About</h4>
-            <a href="#about">Our mission</a>
-            <a href="#impact">Stories of hope</a>
-            <a href="#get-involved">Sponsors &amp; partners</a>
+            <a href="/#about">Our Story &amp; Mission</a>
+            <a href="/leadership">Leadership &amp; Governance</a>
+            <a href="/#get-involved">Sponsors &amp; partners</a>
             <a href="mailto:soccer@ejje.net">Request annual report</a>
           </div>
           <div>
@@ -37,9 +37,14 @@ export function Footer() {
             <a href="mailto:soccer@ejje.net">Contact / Sponsorship</a>
           </div>
         </div>
-        <div className="footer-bottom">
-          <span>© 2026 EJJE Incorporated · Registered 501(c)(3) nonprofit (formerly EJJE Soccer Academy)</span>
-          <span>Tampa Bay, FL · <a href="mailto:soccer@ejje.net" style={{ color: 'inherit' }}>soccer@ejje.net</a> · <a href="tel:+18133556671" style={{ color: 'inherit' }}>813-355-6671</a></span>
+        <div className="footer-bottom" style={{ flexDirection: 'column', gap: 8, alignItems: 'flex-start' }}>
+          <span style={{ lineHeight: 1.6 }}>
+            © 2026 EJJE Incorporated. EJJE Inc. is a registered 501(c)(3) tax-exempt organization. All donations are
+            tax-deductible to the full extent of the law.
+          </span>
+          <span>
+            Tampa Bay, FL · <a href="mailto:soccer@ejje.net" style={{ color: 'inherit' }}>soccer@ejje.net</a> · <a href="tel:+18133556671" style={{ color: 'inherit' }}>813-355-6671</a>
+          </span>
         </div>
       </div>
     </footer>

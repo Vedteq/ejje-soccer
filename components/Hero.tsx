@@ -4,7 +4,7 @@ import { Arrow } from './Arrow'
 
 export function Hero() {
   return (
-    <section id="hero" className="hero" data-section="hero">
+    <section id="hero" className="hero" data-section="hero" data-dark="1">
       <div className="hero-bg" style={{
         backgroundImage: 'url(/images/e1430256e49d3a3842046121f6d80484.png)',
         backgroundSize: 'cover',
@@ -15,18 +15,17 @@ export function Hero() {
       <div className="hero-content">
         <div>
           <div className="eyebrow" style={{ fontSize: 26, marginBottom: 20, transform: 'rotate(-2deg)', display: 'inline-block' }}>
-            — at home and around the world —
+            — education, sports &amp; opportunity —
           </div>
           <h1 className="display">
-            Education for <br />
-            <span className="script">every child.</span>
+            Unlocking global <br />
+            youth potential <span className="script">through education &amp; sports.</span>
           </h1>
           <p className="hero-lead">
-            Millions of underserved children lack access to essential learning resources.
-            EJJE Incorporated provides education, mentorship, and community support for children and families
-            <strong> in the U.S. and internationally.</strong>
+            EJJE Incorporated bridges <strong>local academic readiness in Florida</strong> with
+            <strong> elite athletic development and critical community infrastructure in Sub-Saharan Africa.</strong>
             <br /><br />
-            <strong>Your gift opens the door to lifelong opportunity.</strong>
+            Two pipelines, one mission — opening the door to lifelong opportunity.
           </p>
           <div className="hero-ctas">
             <a
@@ -36,13 +35,13 @@ export function Hero() {
               className="btn btn-primary big"
               style={{ textDecoration: 'none' }}
             >
-              <span>♥</span> Donate now
+              <span>♥</span> Donate Securely
             </a>
-            <a href="#programs" className="btn btn-ghost big">Support a program</a>
+            <a href="#impact-pipelines" className="btn btn-ghost big">Explore Our Impact</a>
           </div>
           <div className="hero-footnote">
             <span>501(c)(3) nonprofit</span>
-            <span>Tampa Bay, FL · Africa</span>
+            <span>Tampa Bay, FL · Sub-Saharan Africa</span>
             <span>Since 2009</span>
           </div>
         </div>
@@ -165,7 +164,7 @@ export function About() {
           </p>
           <p>Thank you for being part of this.</p>
           <div className="signature">— Eddie</div>
-          <div className="sig-meta">Eddie Oyakhilome · Founder &amp; Executive Director, EJJE Incorporated</div>
+          <div className="sig-meta">Edwin &ldquo;Eddie&rdquo; Oyakhilome · Founder &amp; President, EJJE Incorporated</div>
         </div>
       </div>
     </section>

@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import { Fraunces, Inter, Caveat, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { SiteHeader } from '@/components/SiteHeader'
+import { Footer } from '@/components/Footer'
+import { FloatDonate } from '@/components/Hero'
 
 const fraunces = Fraunces({
   variable: '--font-fraunces',
@@ -38,7 +41,12 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${inter.variable} ${caveat.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <Footer />
+        <FloatDonate />
+      </body>
     </html>
   )
 }

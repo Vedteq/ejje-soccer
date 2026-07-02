@@ -69,7 +69,7 @@ export function Programs() {
   const [active, setActive] = useState(0)
 
   return (
-    <section id="programs" className="section on-pitch" data-section="programs">
+    <section id="programs" className="section on-pitch" data-section="programs" data-dark="1">
       <div className="wrap">
         <div className="section-head">
           <div>

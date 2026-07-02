@@ -21,7 +21,7 @@ export function Donate() {
   const impact = [...impacts].reverse().find(i => finalAmount >= i.min) || impacts[0]
 
   return (
-    <section id="donate" className="section on-pitch" data-section="donate">
+    <section id="donate" className="section on-pitch" data-section="donate" data-dark="1">
       <div className="wrap">
         <div className="donate-wrap">
           <div>
@@ -83,6 +83,10 @@ export function Donate() {
               />
             </div>
             <div className="donate-impact">{impact.text}</div>
+            <div className="zero-fee">
+              <span className="badge">100%</span>
+              <span><strong>100% of your gift goes directly to programs</strong> — zero platform fees. Processed securely via Zeffy.</span>
+            </div>
             <a
               href="https://www.zeffy.com/donation-form/e6583dcc-fd51-4fee-9e71-19062c76afde"
               target="_blank"
@@ -95,6 +99,26 @@ export function Donate() {
             <p style={{ marginTop: 14, fontSize: 12, color: 'var(--muted)', textAlign: 'center' }}>
               Secure checkout via Zeffy · Receipt emailed instantly
             </p>
+          </div>
+        </div>
+
+        {/* Cost-to-impact: translate dollars into physical deliverables */}
+        <div style={{ marginTop: 72 }}>
+          <div className="eyebrow" style={{ fontSize: 20, marginBottom: 6, color: 'var(--accent-2)' }}>your dollars at work</div>
+          <h3 style={{ fontFamily: 'var(--font-fraunces), Georgia, serif', fontSize: 30, fontWeight: 400, letterSpacing: '-0.02em', color: 'var(--chalk)', marginBottom: 8 }}>
+            What your gift delivers.
+          </h3>
+          <div className="cost-grid">
+            {[
+              { amt: '$25', desc: 'Equips a student with a fully loaded backpack of school supplies.' },
+              { amt: '$50', desc: 'Sponsors an international youth athlete’s academic tuition and books for a month.' },
+              { amt: '$2,500 – $5,000', desc: 'Directly funds a community-wide clean-water borehole pipe installation.' },
+            ].map(c => (
+              <div key={c.amt} className="cost-card">
+                <div className="amt">{c.amt}</div>
+                <div className="desc">{c.desc}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
