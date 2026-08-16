@@ -75,9 +75,13 @@ export function Nav({ barVisible }: NavProps) {
         className={`nav ${scrolled ? 'scrolled' : ''} ${dark ? 'on-dark' : ''}`}
         style={{ color: dark ? 'var(--chalk)' : 'var(--ink)', top: barVisible ? 44 : 0 }}
       >
-        <Link href="/" className="nav-logo">
-          <div className="crest">E</div>
-          <span>EJJE Incorporated</span>
+        <Link href="/" className="nav-logo" aria-label="EJJE Incorporated — home">
+          <img
+            src="/images/ejje-logo.png"
+            srcSet="/images/ejje-logo.png 1x, /images/ejje-logo@2x.png 2x"
+            alt="EJJE Incorporated"
+            className="nav-logo-img"
+          />
         </Link>
 
         <div className="nav-links">
